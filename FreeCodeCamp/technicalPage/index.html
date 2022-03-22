@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Linux</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Raleway:wght@300&family=Work+Sans&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</head>
+
+<body>
+    <main id="main-doc">
+        <nav id="navbar">
+            <header id="header">Learn Linux</header>
+            <ul id="nav-ul">
+                <li class="nav-li"><a href="#getting_started" class="nav-link">Getting Started</a></li>
+                <li class="nav-li"><a href="#command_line" class="nav-link">Command Line</a></li>
+                <li class="nav-li"><a href="#text-fu" class="nav-link">Text-Fu</a></li>
+                <li class="nav-li"><a href="#user_management" class="nav-link">User Management</a></li>
+                <li class="nav-li"><a href="#permissions" class="nav-link">Permissions</a></li>
+                <li class="nav-li"><a href="#processes" class="nav-link">Processes</a></li>
+                <li class="nav-li" id="last-li"><a href="#packages" class="nav-link">Packages</a></li>
+            </ul>
+        </nav>
+        <section id="title-section" class="main-title-section">
+            <header id="title-header">Learn the ways of Linux-fu</header>
+            <img src="./images/jumbotron-60c93c2fc6bb16079b70fe2eccacaa05f2d6b002af4ff0667ddd8e283cbf81fd.png"
+                alt="Linux Penguin" id="title-image">
+        </section>
+        <section class="main-section" id="getting_started">
+            <header class="section-header">Getting Started</header>
+            <p>Hey rookie! So you decided to dive into this wonderful world known as Linux? It’s gonna be a beautiful
+                and enjoyable road ahead! My name is Penguin Pete and I’m here to guide you through this journey. Let’s
+                get started with a little bit of backstory about Linux.
+                <br></br>
+                To learn about how Linux came to be, let’s go back to the beginning to 1969 where Ken Thompson and
+                Dennis Ritchie of Bell Laboratories developed the UNIX operating system. It was later rewritten in C to
+                make it more portable and eventually became a widely used operating system.
+                <br></br>
+                A decade or so later, Richard Stallman started working on the GNU (GNU is Not UNIX) project, the GNU
+                kernel called Hurd, which unfortunately never came to completion. The GNU General Public License (GPL),
+                a free software license, was also created as a result of this.
+                <br></br>
+                The kernel is the most important piece in the operating system. It allows the hardware to talk to the
+                software. It also does a whole lot of other things, but we’ll dig into that in a different course. For
+                now, just know that the kernel controls pretty much everything that happens on your system.
+                <br></br>
+                During this time other efforts such as BSD, MINIX, etc were developed to be UNIX like-systems. However,
+                one thing that all these UNIX like-systems had in common was the lack of a unified kernel.
+                <br></br>
+                Then in 1991, a young fellow named Linus Torvalds started developing what we now know today as the Linux
+                kernel.
+            </p>
+            <p>The term Linux is actually quite a misnomer, since it actually refers to the Linux kernel. However, many
+                distributions use the Linux kernel so therefore are commonly known as Linux operating systems.
+                <br></br>
+                A Linux system is divided into three main parts:
+                <br></br>
+                Hardware - This includes all the hardware that your system runs on as well as memory, CPU, disks, etc.
+                Linux Kernel - As we discussed above, the kernel is the core of the operating system. It manages the
+                hardware and tells it how to interact with the system.
+                User Space - This is where users like yourself will be directly interacting with the system.
+                So the first step we’ll need to take is to install Linux on your machine. You have many options to
+                choose from and this course will help inform you and get you started on choosing a Linux distribution.
+                <br></br>
+                There are many Linux distributions to choose from, we’ll just go over the most popular options.
+            </p>
+        </section>
+        <section class="main-section" id="command_line">
+            <header class="section-header">Command Line</header>
+            <p>The world is your oyster, or really the shell is your oyster. What is the shell? The shell is basically a
+                program that takes your commands from the keyboard and sends them to the operating system to perform. If
+                you’ve ever used a GUI, you’ve probably seen programs such as “Terminal” or “Console” these are just
+                programs that launch a shell for you. Throughout this entire course we will be learning about the
+                wonders of the shell.
+                <br></br>
+                In this course we will use the shell program bash (Bourne Again shell), almost all Linux distributions
+                will default to the bash shell. There are other shells available such as ksh, zsh, tsch, but we won’t
+                get into any of those.
+                <br></br>
+                Let’s jump right in! Depending on the distribution your shell prompt might change, but for the most part
+                it should adhere to the following format:
+            </p>
+            <code>username@hostname:current_directory
+                pete@icebox:/home/pete $</code>
+            <p>Notice the $ at the end of the prompt? Different shells will have different prompts, in our case the $ is
+                for a normal user using Bash, Bourne or Korn shell, you don't add the prompt symbol when you type the
+                command, just know that it's there.
+                <br></br>
+                Let’s start with a simple command, echo. The echo command just prints out the text arguments to the
+                display.
+
+            </p>
+            <code>$ echo Hello World</code>
+
+        </section>
+        <section class="main-section" id="text-fu">
+            <header class="section-header">Text-Fu</header>
+            <p>By now, we've become familiar with many commands and their output and that brings us to our next subject
+                I/O (input/output) streams. Let's run the following command and we'll discuss how this works.</p>
+            <code>$ echo Hello World > peanuts.txt</code>
+            <p>What just happened? Well check the directory where you ran that command and lo and behold you should see
+                a file called peanuts.txt, look inside that file and you should see the text Hello World. Lots of things
+                just happened in one command so let's break it down.
+                <br></br>
+                First let's break down the first part:
+            </p>
+            <code>$ echo Hello World</code>
+            <p>We know this prints out Hello World to the screen, but how? Processes use I/O streams to receive input
+                and return output. By default the echo command takes the input (standard input or stdin) from the
+                keyboard and returns the output (standard output or stdout) to the screen. So that's why when you type
+                echo Hello World in your shell, you get Hello World on the screen. However, I/O redirection allows us to
+                change this default behavior giving us greater file flexibility.
+                <br></br>
+                Let's proceed to the next part of the command:
+            </p>
+            <code> > </code>
+            <p>The > is a redirection operator that allows us the change where standard output goes. It allows us to
+                send the output of echo Hello World to a file instead of the screen. If the file does not already exist
+                it will create it for us. However, if it does exist it will overwrite it (you can add a shell flag to
+                prevent this depending on what shell you are using).
+                <br></br>
+                And that's basically how stdout redirection works!
+                <br></br>
+                Well let's say I didn't want to overwrite my peanuts.txt, luckily there is a redirection operator for
+                that as well, >>:
+            </p>
+            <code>$ echo Hello World >> peanuts.txt</code>
+            <p>This will append Hello World to the end of the peanuts.txt file, if the file doesn't already exist it
+                will create it for us like it did with the > redirector!</p>
+        </section>
+        <section class="main-section" id="user_management">
+            <header class="section-header">User Management</header>
+            <p>In any traditional operating system, there are users and groups. They exist solely for access and
+                permissions. When running a process, it will run as the owner of that process whether that is Jane or
+                Bob. File access and ownership is also permission dependent. You wouldn't want Jane to see Bob's
+                documents and vice versa.
+                <br></br>
+                Each user has their own home directory where their user specific files get stored, this is usually
+                located in /home/username, but can vary in different distributions.
+                <br></br>
+                The system uses user ids (UID) to manage users, usernames are the friendly way to associate users with
+                identification, but the system identifies users by their UID. The system also uses groups to manage
+                permissions, groups are just sets of users with permission set by that group, they are identified by the
+                system with their group ID (GID).
+                <br></br>
+                In Linux, you'll have users in addition to the normal humans that use the system. Sometimes these users
+                are system daemons that continuously run processes to keep the system functioning. One of the most
+                important users is root or superuser, root is the most powerful user on the system, root can access any
+                file and start and terminate any process. For that reason, it can be dangerous to operate as root all
+                the time, you could potentially remove system critical files. Luckily, if root access is needed and a
+                user has root access, they can run a command as root instead with the sudo command. The sudo command
+                (superuser do) is used to run a command with root access, we'll go more in depth on how a user receives
+                root access in a later lesson.
+                <br></br>
+                Go ahead and try to view a protected file like /etc/shadow:
+            </p>
+            <code>$ cat /etc/shadow</code>
+            <p>Notice how you get a permission denied error, look at the permissions with:</p>
+            <code>$ ls -la /etc/shadow<br>
+                -rw-r----- 1 root shadow 1134 Dec 1 11:45 /etc/shadow
+                </code>
+            <p>We haven't gone through permissions yet, but what's happening here is that root is the owner of the file
+                and you'll need root access or be part of the shadow group to read the contents. Now run the command
+                with sudo:</p>
+            <code>$ sudo cat /etc/shadow</code>
+            <p>Now you'll be able to see the contents of the file!</p>
+        </section>
+        <section class="main-section" id="permissions">
+            <header class="section-header">Permissions</header>
+            <p>As we learned previously, files have different permissions or file modes. Let's look at an example:</p>
+            <code>$ ls -l Desktop/
+
+                drwxr-xr-x 2 pete penguins 4096 Dec 1 11:45 .</code>
+            <p>There are four parts to a file's permissions. The first part is the filetype, which is denoted by the
+                first character in the permissions, in our case since we are looking at a directory it shows d for the
+                filetype. Most commonly you will see a - for a regular file.
+                <br></br>
+                The next three parts of the file mode are the actual permissions. The permissions are grouped into 3
+                bits each. The first 3 bits are user permissions, then group permissions and then other permissions.
+                I've added the pipe to make it easier to differentiate.
+            </p>
+            <code>d | rwx | r-x | r-x </code>
+            <p>Each character represent a different permission:
+            <ul id="permissions-ul">
+                <li class="permissions-li">r (readable)</li>
+                <li class="permissions-li">w (writable)</li>
+                <li class="permissions-li">x (executable (basically an executable program))</li>
+                <li class="permissions-li">- (empty)</li>
+                <li class="permissions-li">[...]</li>
+            </ul>
+            <p>So in the above example, we see that the user pete has read, write and execute permissions on the file.
+                The group penguins has read and execute permissions. And finally, the other users (everyone else) has
+                read and execute permissions.</p>
+        </section>
+        <section class="main-section" id="processes">
+            <header class="section-header">Processes</header>
+            <p>Processes are the programs that are running on your machine. They are managed by the kernel and each
+                process has an ID associated with it called the process ID (PID). This PID is assigned in the order that
+                processes are created.
+                <br></br>
+                Go ahead and run the ps command to see a list of running processes:
+            </p>
+            <code>$ ps
+
+                PID        TTY     STAT   TIME          CMD
+                
+                41230    pts/4    Ss        00:00:00     bash
+                
+                51224    pts/4    R+        00:00:00     ps</code>
+            <p>This shows you a quick snapshot of the current processes:
+
+                PID: Process ID
+                TTY: Controlling terminal associated with the process (we'll go in detail about this later)
+                STAT: Process status code
+                TIME: Total CPU usage time
+                CMD: Name of executable/command
+                If you look at the man page for ps you'll see that there are lots of command options you can pass, they
+                will vary depending on what options you want to use - BSD, GNU or Unix. In my opinion the BSD style is
+                more popular to use, so we're gonna go with that. If you are curious the difference between the styles
+                is the amount of dashes you use and the flags.</p>
+        </section>
+        <section class="main-section" id="packages">
+            <header class="section-header">Packages</header>
+            <p>Your system is comprised of many packages such as internet browsers, text editors, media players, etc.
+                These packages are managed via package managers, which install and maintain the software on your system.
+                Not all packages are installed through package managers though, you can commonly install packages
+                directly from their source code (we'll get to that soon). However the majority of the time you will use
+                a package manager to install software, the most common variety of packages are Debian (.deb) and Red Hat
+                (.rpm). Debian style packages are used in distributions such as Debian, Ubuntu, LinuxMint, etc. Red Hat
+                style packages are seen in Red Hat Enterprise Linux, Fedora, CentOS, etc.
+                <br></br>
+                What are packages? You may know them as Chrome, Photoshop, etc and they are, but what they really are
+                just lots and lots of files that have been compiled into one. The people (or sometimes a single person)
+                that write this software are known as upstream providers, they compile their code and write up how to
+                get it installed. These upstream providers work on getting out new software and update existing
+                software. When they are ready to release it to the world, they send their package to package
+                maintainers, who handle getting this piece of software in the hands of the users. These package
+                maintainers review, manage and distribute this software in the form of packages.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>

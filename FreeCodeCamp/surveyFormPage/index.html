@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Zen+Old+Mincho:wght@900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div id="container">
+    <header>
+        <h1 id='title'>Movies & TV Series Genres</h1>
+        <p id="description">Which one is Your favorite?</p>
+    </header>
+    <main id="survey">
+        <form id="survey-form">
+            <div class="form-class">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required />
+            </div>
+            <div class="form-class">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email"
+                    required />
+            </div>
+            <div class="form-class">
+                <label id="number-label" for="number">Movies watched this month</label>
+                <input type="number" id="number" name="number" class="form-control" placeholder="Enter number" min="0"
+                    max="99" />
+            </div>
+            <div class="form-class">
+                <label id="dropdown" for="dropdown">Favorite movie genre</label>
+                <select id="dropdown" class="form-control">
+                    <option disabled selected value>Select genre</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="horror">Horror</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="action">Action</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="romance">Romance</option>
+                </select>
+            </div>
+            <div class="form-class">
+                <p class="p-label">How many movies do You watch per month?</p>
+                <label class="radio-label">
+                    <input type="radio" class="input-radio" value="zero-five" name="favorite-genre" checked />0 - 5
+                    movies
+                </label>
+                <label class="radio-label">
+                    <input type="radio" class="input-radio" value="six-ten" name="favorite-genre" />6 - 10
+                    movies</label>
+                <label class="radio-label">
+                    <input type="radio" class="input-radio" value="eleven-fifteen" name="favorite-genre" />11 - 15
+                    movies</label>
+                <label class="radio-label">
+                    <input type="radio" class="input-radio" value=">16" name="favorite-genre" />> 16 movies</label>
+            </div>
+            <div class="form-class">
+                <p class="p-label">Which websites do You subscribe?</p>
+                <label class="radio-label">
+                    <input type="checkbox" class="input-checkbox" value="netflix" name="website-sub" />Netflix</label>
+                <label class="radio-label">
+                    <input type="checkbox" class="input-checkbox" value="hbo-go" name="website-sub" />HBO Go</label>
+                <label class="radio-label">
+                    <input type="checkbox" class="input-checkbox" value="amazon-prime" name="website-sub" />Amazon
+                    Prime</label>
+                <label class="radio-label">
+                    <input type="checkbox" class="input-checkbox" value="disney+" name="website-sub" />Disney +</label>
+                <label class="radio-label">
+                    <input type="checkbox" class="input-checkbox" value="none" name="website-sub" />None</label>
+            </div>
+            <div class="form-class">
+                <p class="p-label">What's Your favorite movie?</p>
+                <textarea id="favorite-movie" name="favorite-movie" class="input-textarea"
+                    placeholder="Enter a name of Your favorite movies"></textarea>
+            </div>
+            <div class="form-class">
+                <input type="submit" id="submit" value="Submit" />
+            </div>
+        </form>
+    </main>
+</div>
+
+</html>

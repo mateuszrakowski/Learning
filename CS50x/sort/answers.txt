@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: The big O (n2) matches the reversed and Omega (n) matches the sorted.
+
+sort2 uses: merge sort
+
+How do you know? The big O (n log n) matches the reversed and Omega (n log n) matches the sorted.
+
+sort3 uses: selection sort
+
+How do you know?: The big O (n2) matches the reversed and Omega (n2) matches the sorted.

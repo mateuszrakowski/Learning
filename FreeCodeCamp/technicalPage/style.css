@@ -1,0 +1,137 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Libre Baskerville", serif;
+	font-family: "Raleway", sans-serif;
+	font-family: "Work Sans", sans-serif;
+}
+
+#navbar {
+	position: fixed;
+	width: 250px;
+	height: 100%;
+	border-right: solid;
+	text-decoration: none;
+	color: #000;
+	font-size: 18px;
+}
+
+#navbar > header {
+	padding: 20px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#nav-ul {
+	list-style: none;
+}
+
+@media only screen and (max-width: 815px) {
+	#navbar ul {
+		border: 1px solid;
+		height: 208px;
+	}
+}
+
+#last-li {
+	border-bottom: 1px solid #000;
+}
+
+.nav-li {
+	padding: 20px;
+	border-top: 1px solid #000;
+}
+
+.nav-link {
+	display: block;
+	padding: 20px;
+	margin: -20px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.nav-link:hover {
+	transition: 0.5s ease;
+	background-color: rgb(48, 184, 157);
+}
+
+.main-section {
+	margin-left: 250px;
+	padding: 30px;
+}
+
+.main-title-section {
+	margin-left: 250px;
+	padding: 30px;
+}
+
+#title-section {
+	background: rgb(48, 184, 157);
+	background: linear-gradient(
+		90deg,
+		rgba(48, 184, 157, 1) 0%,
+		rgba(20, 193, 162, 1) 80%
+	);
+	height: 412px;
+	border-bottom: 0.5px groove #000;
+}
+
+#title-section > img {
+	margin: auto;
+	display: flex;
+	padding-top: 55px;
+	width: auto;
+	height: auto;
+}
+
+#title-header {
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+	color: #e7f1ee;
+	text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
+}
+
+.section-header {
+	padding-bottom: 10px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+p {
+	font-size: 18px;
+	color: #525252;
+	width: 90%;
+	text-justify: auto;
+	padding-left: 25px;
+	padding-top: 20px;
+}
+
+#permissions-ul {
+	padding-left: 45px;
+	padding-top: 20px;
+}
+
+.permissions-li {
+	font-size: 18px;
+	color: #525252;
+	width: 90%;
+	text-justify: auto;
+}
+
+code {
+	margin-top: 20px;
+	padding: 10px;
+	margin-left: 23px;
+	line-height: 2;
+	display: block;
+	text-align: left;
+	white-space: pre-line;
+	position: relative;
+	word-break: normal;
+	word-wrap: normal;
+	background-color: #f7f7f7;
+	border-radius: 5px;
+	width: 88%;
+	border-style: groove;
+}

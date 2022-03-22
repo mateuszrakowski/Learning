@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Quicksand&family=Ubuntu&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="nav-logo-wrap">
+        <a href="#welcome-section"><img src="./images/Fsociety_logo_-_Copy.jpg" alt="" class="nav-logo"></a>
+    </div>
+    <div class="nav-wrap">
+        <nav id="navbar">
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <li><a class="first" href="#welcome-section">About me</a></li>
+                <li><a href="#projects">My skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+            </ul>
+        </nav>
+    </div>
+    <script src="./app.js"></script>
+
+    <section class="about-me" id="welcome-section">
+        <div class="headline">
+            <h1>Hi,<br> I'm <span class="first-letter">M</span>atthew, <br>web developer</h1>
+            <p>At the beginning of front end developer journey.</p>
+        </div>
+    </section>
+
+    <section class="my-skills" id="projects">
+        <div class="text-container">
+            <h2>Skills & <br>Learning path</h2>
+            <p>My journey started a few months ago. Since then, I have learned a lot about HTML and CSS. I do my best to
+                stay up to date with code. So far, I have created a few projects for FreeCodeCamp. In addition, I'm
+                learning Git techniques, accessibility, semantic HTML, and CSS tricks. I had the opportunity to start
+                working with Google Clound Environment thanks to a 1-month course.</p><br>
+            <p>In the future, I will start learning the powerful JavaScript. I also plan to learn more about JS
+                libraries, especially React.</p><br>
+            <p>I hope that learning to code will lead me to my first job as a developer. This is my goal - to work as a
+                front-end dev and be proud of my skills.</p><br>
+            <p>Keep your fingers crossed!</p>
+        </div>
+        <div class="project-tile">
+            <img src="./images/Html.png" alt="" class="skills-image">
+            <img src="./images/CSS3_logo_and_wordmark.svg.png" alt="" class="skills-image">
+            <img src="./images/js.png" alt="" class="skills-image">
+            <img src="./images/reactt.png" alt="" class="skills-image">
+        </div>
+        <a href=""></a>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2>Contact me</h2>
+            <p>Write to me using the form if you're interested in how I'm doing with learning the code or have another
+                question. Thanks for visiting my site and check my <a href="https://github.com/mateuszrakowski"
+                    class="github-link">GitHub</a>! </p>
+            <form>
+                <input type="text" name="name" id="name" class="contact-form" aria-label="Your name" placeholder="Name">
+                <input type="email" name="email" id="email" class="contact-form" aria-label="Your email"
+                    placeholder="Email">
+                <input type="text" name="subject" id="subject" class="contact-form" aria-label="Subject area"
+                    placeholder="Subject">
+                <textarea name="message" id="message" cols="30" rows="10" class="contact-form" aria-label="Message area"
+                    placeholder="Message"></textarea>
+                <button type="button">Send message!</button>
+            </form>
+        </div>
+        <div class="contact-img-wrap">
+            <img src="./images/mimage-removebg-preview.png" alt="" class="contact-me-image">
+        </div>
+    </section>
+
+</body>
+
+</html>
